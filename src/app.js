@@ -5,6 +5,7 @@ const hbs = require('hbs')
 const geocode = require('.\\utils\\gecode')
 const forecast = require('.\\utils\\forecast')
 
+const port = process.env.PORT || 3000
 console.log(__dirname, __filename)
 console.log(path.join(__dirname,'..','public'))
 
@@ -87,6 +88,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('start')
+app.listen(port, () => {
+    console.log('start' + port)
 })
